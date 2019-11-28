@@ -1,0 +1,20 @@
+ja:
+  enums:
+    cost:
+      category:
+        food:                '食費'
+        daily_necessities:   '日用品'
+        transportation:      '交通費'
+        book:                '本・雑誌'
+        miscellaneous:       '雑費'
+        clothing_costs:      '衣類・ファッション'
+        entertainment:       '娯楽費'
+        medical_bills:       '医療費'
+        rent:                '家賃'
+        communication_costs: '通信費'
+        expence:             '経費'
+        electricity_bill:    '電気代'
+        water_bill:          '水道代'
+        gas_bill:            'ガス代'
+        insurance:           '保険'
+        tuition:             '学費'
