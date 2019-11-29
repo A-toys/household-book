@@ -1,0 +1,20 @@
+.input
+  = form_with model: @cost, local: true do |f|
+    .input__category
+      = f.label :category, 'カテゴリー：'
+      = f.select :category, Cost.categories_i18n.invert, class: 'input__category__form', placeholder: '選択してください'
+
+    .input__price
+      = f.label :price, '金額：'
+      = f.text_field :price, class: 'input__price__form'
+
+    .input__content
+      = f.label :content, '内容：'
+      = f.text_field :content, class: 'input__content__form'
+
+    .input__date
+      = f.label :date, '日付：'
+      = f.datetime_field :date, class: 'input__date__form'
+
+    .input__submit
+      = f.submit '入力', class: 'input__submit__form'
