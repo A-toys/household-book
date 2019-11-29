@@ -11,15 +11,20 @@
     .header
       .header__bar
         %h1.header__title
-          = link_to '#' do
+          = link_to root_path, class: 'header__title__text' do
             CostNote
         .header__right
-          -# current_user.name
-          サンプルさん
-          = link_to '#' do
-            リスト一覧
+          .header__right__text
+            -# current_user.name
+            サンプルさん
+          
+          = link_to '#', class: 'header__right__btnL' do
+            .header__right__btnL--icon 
+              リスト一覧
+          
           -# = link_to destroy_user_session_path, method: :delete do
-          = link_to '#' do
-            ログアウト
+          = link_to '#', class: 'header__right__btnR' do
+            .header__right__btnR--icon
+              ログアウト
 
     = yield
