@@ -66,4 +66,3 @@ gem "font-awesome-sass"
 gem 'devise'
 
 gem 'enum_help' 
-
