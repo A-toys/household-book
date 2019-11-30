@@ -13,18 +13,29 @@
         %h1.header__title
           = link_to root_path, class: 'header__title__text' do
             CostNote
-        .header__right
-          .header__right__text
-            -# current_user.name
-            サンプルさん
-          
-          = link_to '#', class: 'header__right__btnL' do
-            .header__right__btnL--icon 
-              リスト一覧
-          
-          -# = link_to destroy_user_session_path, method: :delete do
-          = link_to '#', class: 'header__right__btnR' do
-            .header__right__btnR--icon
-              ログアウト
+        - if user_signed_in?
+          .header__right
+            .header__right__text
+              ようこそ
+              %span.header__right__text--name
+                = current_user.name
+              さん
+            
+            = link_to '#', class: 'header__right__btn' do
+              .header__right__btn--icon 
+                リスト一覧
+            
+            = link_to destroy_user_session_path, method: :delete, class: 'header__right__btnR' do
+              .header__right__btnR--icon
+                ログアウト
+        - else
+          .header__right
+            = link_to new_user_session_path, class: 'header__right__btn' do
+              .header__right__btn--icon 
+                ログイン
+            = link_to new_user_registration_path, class: 'header__right__btn' do
+              .header__right__btn--icon 
+                新規登録
 
-    = yield
+    .content
+      = yield
