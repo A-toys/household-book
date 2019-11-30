@@ -13,7 +13,7 @@ class CostsController < ApplicationController
   private
 
   def cost_params
-    params.require(:cost).permit(:category, :price, :content, :date)
+    params.require(:cost).permit(:category, :price, :content, :date).merge(user_id: current_user.id)
   end
 
 end
