@@ -3,7 +3,7 @@ class CreateCosts < ActiveRecord::Migration[5.2]
     create_table :costs do |t|
       t.integer :category, null: false
       t.integer :price, null: false
-      t.string :content
+      t.text :content
       t.datetime :date, null: false
       t.timestamps
     end

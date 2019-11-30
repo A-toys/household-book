@@ -17,24 +17,30 @@
   .header__right {
     display: flex;
     &__text {
-      line-height: 46px;
+      margin-right: 20px;
+      line-height: 50px;
+      &--name {
+        padding-left: 5px;
+        font-size: 20px;
+        color: #24140e;
+        background-color: #fff;
+      }
     }
-    &__btnL {
+    &__btn {
       margin-left: 20px;
       padding: 10px 10px;
-      border: 2px solid #666;
+      background-color: #fff;
+      border: 3px solid #719bad;
       border-radius: 3px;
       text-decoration: none;
       &--icon {
-        color: #666;
+        color: #719bad;
         font-weight: bold;
       }
     }
     &__btnR {
       margin-left: 20px;
-      padding: 10px 10px;
-      border: 2px solid red;
-      border-radius: 3px;
+      line-height: 50px;
       text-decoration: none;
       &--icon {
         color: red;
@@ -44,25 +50,33 @@
   }
 }
 
-.input {
+.content {
   height: calc(100vh - 100px);
-  background-color: gray;
+  background-color: #c6c6c6;
   padding: 50px 0 0;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  width: 220px;
   &__form {
-    margin-top: 15px;
-    text-align: center;
-    font-weight: bold;
+    margin-bottom: 5px;
+    &__label {
+      font-size: 18px;
+      font-weight: bold;
+      color: #24140e;
+    }
   }
 }
 .input__submit__btn {
   display: inline-block;
-  width: 180px;
-  margin-top: 10px;
+  width: 130px;
+  margin-top: 20px;
   padding: 10px 0;
   font-size: 20px;
   font-weight: bold;
   color: #fff;
-  background-color: #57C3E9;
-  border-radius: 20px;
+  background-color: #719bad;
+  border-radius: 15px;
 }

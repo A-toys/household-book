@@ -1,19 +1,23 @@
 .input
   = form_with model: @cost, local: true do |f|
     .input__form__category.input__form
-      = f.label :category, 'カテゴリー：'
-      = f.select :category, Cost.categories_i18n.invert, class: 'input__category', placeholder: '選択してください'
+      = f.label :category, 'カテゴリ', class: 'input__form__label'
+      %br/
+      = f.select :category, Cost.categories_i18n.invert, class: 'input__category', prompt: '選択してください'
 
     .input__form__price.input__form
-      = f.label :price, '金額：'
-      = f.text_field :price, class: 'input__price'
+      = f.label :price, '金額', class: 'input__form__label'
+      %br/
+      = f.text_field :price, class: 'input__price', placeholder: ''
 
     .input__form__content.input__form
-      = f.label :content, '内容：'
-      = f.text_field :content, class: 'input__content'
+      = f.label :content, '内容・コメント', class: 'input__form__label'
+      %br/
+      = f.text_area :content, class: 'input__content', placeholder: ''
 
     .input__form__date.input__form
-      = f.label :date, '日付：'
+      = f.label :date, '日付', class: 'input__form__label'
+      %br/
       = f.datetime_field :date, class: 'input__date'
 
     .input__form__submit.input__form
