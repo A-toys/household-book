@@ -2,10 +2,29 @@
 %html
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}/
-    %title HouseholdBook
+    %title CostNote
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    .header
+      .header__bar
+        %h1.header__title
+          = link_to root_path, class: 'header__title__text' do
+            CostNote
+        .header__right
+          .header__right__text
+            -# current_user.name
+            サンプルさん
+          
+          = link_to '#', class: 'header__right__btnL' do
+            .header__right__btnL--icon 
+              リスト一覧
+          
+          -# = link_to destroy_user_session_path, method: :delete do
+          = link_to '#', class: 'header__right__btnR' do
+            .header__right__btnR--icon
+              ログアウト
+
     = yield
