@@ -20,8 +20,8 @@
           %td
             = cost.date
           %td
-            = link_to '#' do
+            = link_to edit_cost_path(cost), class: "td__edit" do
               編集
           %td
-            = link_to '#', method: :delete do
+            = link_to cost_path(cost), method: :delete, class: "td__destroy" do
               削除
