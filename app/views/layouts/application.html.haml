@@ -21,7 +21,7 @@
                 = current_user.name
               さん
             
-            = link_to '#', class: 'header__right__btn' do
+            = link_to "/users/#{current_user.id}", class: 'header__right__btn' do
               .header__right__btn--icon 
                 リスト一覧
             
