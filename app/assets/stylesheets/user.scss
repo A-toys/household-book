@@ -1,7 +1,7 @@
 h2 {
   font-size: 24px;
   font-weight: bold;
-  color: #24140e;
+  color: $lamp_black;
   margin-bottom: 15px;
 }
 
@@ -21,8 +21,8 @@ h2 {
     padding: 10px 0;
     font-size: 18px;
     font-weight: bold;
-    color: #fff;
-    background-color: #719bad;
+    color: $white;
+    background-color: $shadow_blue;
     border-radius: 20px;
   }
 }

@@ -4,14 +4,14 @@
 
 .header__bar {
   height: 100px;
-  background-color: #f5f5f3;
+  background-color: $smoke_white;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   .header__title__text {
     text-decoration: none;
-    color: #666;
+    color: $dark_gray;
     font-size: 30px;
   }
   .header__right {
@@ -22,19 +22,19 @@
       &--name {
         padding-left: 5px;
         font-size: 20px;
-        color: #24140e;
-        background-color: #fff;
+        color: $lamp_black;
+        background-color: $white;
       }
     }
     &__btn {
       margin-left: 20px;
       padding: 10px 10px;
-      background-color: #fff;
-      border: 3px solid #719bad;
+      background-color: $white;
+      border: 3px solid $shadow_blue;
       border-radius: 3px;
       text-decoration: none;
       &--icon {
-        color: #719bad;
+        color: $shadow_blue;
         font-weight: bold;
       }
     }
@@ -43,7 +43,7 @@
       line-height: 50px;
       text-decoration: none;
       &--icon {
-        color: red;
+        color: $red;
         font-weight: bold;
       }
     }
@@ -52,7 +52,7 @@
 
 .content {
   height: calc(100vh - 100px);
-  background-color: #c6c6c6;
+  background-color: $silver_gray;
   padding: 50px 0 0;
   display: flex;
   justify-content: center;
@@ -65,7 +65,7 @@
     &__label {
       font-size: 18px;
       font-weight: bold;
-      color: #24140e;
+      color: $lamp_black;
     }
   }
 }
@@ -76,7 +76,7 @@
   padding: 10px 0;
   font-size: 20px;
   font-weight: bold;
-  color: #fff;
-  background-color: #719bad;
+  color: $white;
+  background-color: $shadow_blue;
   border-radius: 15px;
 }

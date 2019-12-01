@@ -1,0 +1,27 @@
+.table
+  %table.table__list
+    %thead
+      %tr
+        %th カテゴリ
+        %th 金額
+        %th 内容・コメント
+        %th 日付
+        %th(colspan="2")
+
+    %tbody
+      - @costs.each do |cost|
+        %tr
+          %td
+            = cost.category_i18n
+          %td
+            = converting_to_jpy(cost.price)
+          %td
+            = cost.content
+          %td
+            = cost.date
+          %td
+            = link_to edit_cost_path(cost), class: "td__edit" do
+              編集
+          %td
+            = link_to cost_path(cost), method: :delete, class: "td__destroy" do
+              削除
