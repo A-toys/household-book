@@ -3,7 +3,6 @@ table {
   border: solid 3px $gray;
   width: 900px;
 }
-
 th {
   border: solid 2px $gray;
   background-color: $dark_gray;
@@ -12,7 +11,6 @@ th {
   text-align: center;
   padding: 0 10px;
 }
-
 td {
   border: dashed 2px $gray;
   background-color: $white;
@@ -20,14 +18,46 @@ td {
   padding: 2px 0;
 }
 
-.td__edit {
-  text-decoration: none;
-  font-weight: bold;
-  color: $edit_green;
+.list {
+  height: calc(100vh - 100px);
+  background-color: $silver_gray;
+  padding-top: 50px;
 }
 
-.td__destroy {
-  text-decoration: none;
+.total-fee {
+  height: 40px;
+  line-height: 40px;
+  width: 900px;
+  margin: 0 auto 15px;
+  background-color: #228b22;
+  color: $white;
+  border: solid 1px $white;
+  font-size: 18px;
   font-weight: bold;
-  color: $destroy_red;
+  display: flex;
+  justify-content: space-between;
+  &__title {
+    margin-left: 8px;
+  }
+  &__price {
+    margin-right: 8px;
+    &__yen {
+      margin-right: 5px;
+    }
+  }
+}
+
+.table {
+  width: 900px;
+  margin: 0 auto;
+  &__edit {
+    text-decoration: none;
+    font-weight: bold;
+    color: $edit_green;
+  }
+  &__destroy {
+    text-decoration: none;
+    font-weight: bold;
+    color: $destroy_red;
+  }
 }
